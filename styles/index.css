@@ -1,4 +1,4 @@
-:root{
+:root {
     /* Colors */
 
     /* Primary */
@@ -16,39 +16,92 @@
     --fs-paragraph: 14px;
 
     /* Font */
-    --ff-Montserrat: 'Montserrat';
-    --fw-Montserrat-500: 500;
-    --fw-Montserrat-700: 700;
-
-    --ff-Fraunces: 'Fraunces';
-    --fw-Fraunces-700: 700;
+    --ff-Montserrat: 'Montserrat', sans-serif;
+    --ff-Fraunces: 'Fraunces', serif;
+    --fw--500: 500;
+    --fw-700: 700;
 }
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-.item-container{
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--clr-cream);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 90%;
+}
+
+.item-container {
+    font-family: var(--ff-Fraunces);
+    margin-top: 3em;
+    background-color: var(--clr-white);
+    border-radius: 12px;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
-    height: 100vh;
-    width: 100vw;
-    overflow-y: hidden;
+    align-items: center;
 }
-#cover-image img{
+.image-container {
+    border-radius: 12px 12px 0 0;
     background-image: url('../images/image-product-mobile.jpg');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center top;
+    background-size:contain;
+    height: 100%;
+    width: 100%;
+}
+.item-content-container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    
+}
+.item-content-container h1{
+    margin-bottom: .5em;
+    letter-spacing: 5px;
+    font-family: var(--ff-Montserrat);
+    font-size: 11px;
+    font-weight: var(--fw-500);
+    color: var(--clr-dark-grayish-blue);
+}
+.item-content-container h2{
+    margin-bottom: .5em;
+    font-family: inherit;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--clr-very-dark-blue);
+}
+.item-content-container h3{
+    font-family: var(--ff-Montserrat);
+    font-size: var(--fs-paragraph);
+    font-weight: var(--fw-700);
+    color: var(--clr-dark-grayish-blue);
+    line-height: 1.6em;
+    margin-right: 1.5em;
+    word-spacing: .1em;
 }
 
-
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
+.attribution {
+    font-size: 11px;
+    text-align: center;
 }
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }

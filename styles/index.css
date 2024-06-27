@@ -21,7 +21,6 @@
     --fw-500: 500;
     --fw-700: 700;
 }
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -144,12 +143,33 @@ main {
 @media screen and (min-width: 650px) {
     .image-container {
         background-image: url('../images/image-product-desktop.jpg');
+        background-position: bottom;
+        background-size: cover;
+        min-height: inherit;
+        margin: 0 1em 0 0;
+        border-radius: 10px 0 0 10px;
     }
     .item-container{
         display: flex;
         flex-direction: row;
+        max-width: 600px;        
+        min-height: 400px;        
     }
-    .image-container{
-        
+    .item-content-container{
+        padding: 1em 1.5em 0 1em;
+    }
+    .item-content-container #item-name{
+        margin-right: 10%;
+    }
+    .item-content-container #submit-button{
+        background-position: 25%;
+        margin-right: 5%;
+    }
+    .item-content-container #submit-button:hover{
+        cursor: pointer;
+        background-color: hsl(156, 42%, 18%);
+    }
+    .attribution {
+        margin-top: 3.5em;
     }
 }
